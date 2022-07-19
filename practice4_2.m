@@ -1,0 +1,16 @@
+pictureRgb=imread('data\S__88317954.jpg');
+pictureGray=uint8(...
+0.2989*pictureRgb(:,:,1)+...%R
+                0.5870*pictureRgb(:,:,2)+...%G
+                0.1140*pictureRgb(:,:,3)...%B
+);
+figure(1)
+imshow(pictureRgb)
+figure(2)
+imshow(pictureGray)
+picgray=rgb2gray(pictureRgb);
+figure(3)
+imshow(picgray)
+pictureGrayDouble=double(pictureRgb)/255.0;
+figure(4)
+imshow(pictureGrayDouble)
